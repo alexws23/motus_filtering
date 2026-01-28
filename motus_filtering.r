@@ -58,6 +58,4 @@ for (i in mfgIDs) {
 data_final <- bind_rows(list_of_dfs) %>% 
   select(-c(new_run, diff))
 
-data_final <- data_final %>% 
-  select(c(Datetime, runLen,runLen2,motusFilter,motusFilter2, port))
-
+write.csv(data_final, "fall_birds_2025_filter.csv")
